@@ -1,0 +1,15 @@
+//Is there a different between ... and []?
+
+public class QuestionAboutDotAndBracketsInParameter {
+  public static void createArray(int[]  nums){
+    for (int i :nums){
+      System.out.println(i);
+    }
+    System.out.println(nums);
+  }
+  
+  public static void main(String... arg){
+    int[] arr = {1,2,3,4,5,6};
+    createArray(arr);
+  }
+}
