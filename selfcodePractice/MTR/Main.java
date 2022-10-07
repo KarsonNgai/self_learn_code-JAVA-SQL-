@@ -1,0 +1,23 @@
+package MTR;
+public class Main {
+  public static void main(String[] arg){
+    MTRmap.printAll(); //this use to see the setting, including index and shortname
+
+    Graph graph = new Graph(10);
+
+    for (MTRmap i : MTRmap.values()){
+      graph.addNode(new Node(i.shortname));
+    }
+
+    graph.addEdge(0, 1);
+    graph.addEdge(1, 2);
+    graph.addEdge(2, 3);
+    graph.addEdge(4, 5);
+    graph.addEdge(5, 6);
+    graph.addEdge(6, 7);
+    graph.addEdge(3, 8);
+    graph.addEdge(8, 9);
+
+    graph.print(); //final result: matrix
+  }
+}
