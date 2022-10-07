@@ -1,3 +1,5 @@
+package MTR;
+
 enum MTRmap{
   TUNGCHUNG(0,"Tung Chung",'A'),
   SUNNYBAY(1,"Sunny Bay",'B'),
@@ -22,7 +24,7 @@ enum MTRmap{
 
   public static void printAll(){
     for (MTRmap i: MTRmap.values()){
-      System.out.println("index: "+i.index+" station name: " + i.name+" shortname: " + i.shortname);
+      System.out.println("index: "+i.index+" |Shortname: " + i.shortname+" |Station name: " + i.name);
     }
   }
 }
