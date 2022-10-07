@@ -1,6 +1,6 @@
 public class Main {
   public static void main(String[] arg){
-    MTRmap.printAll(); //this use to see the setting, including index and shortname
+    MTRmap.printAll();
 
     Graph graph = new Graph(10);
 
@@ -17,6 +17,13 @@ public class Main {
     graph.addEdge(3, 8);
     graph.addEdge(8, 9);
 
-    graph.print(); //final result: matrix
+    graph.print();
+
+    System.out.println("\n\nHere is the visited map");
+    for (MTRmap i: MTRmap.values()){
+      System.out.println("Station shortname is: "+i.shortname+" |Station name:"+ i.name);
+      graph.depthFirstSearch(i.index);
+      System.out.println("\n\n");
+    }
   }
 }
