@@ -25,7 +25,7 @@ public class Graph {
     }
 
     public void print() {
-      System.out.print("  ");
+      System.out.print("\n  ");
       for (Node node: nodes){
         System.out.print(node.MTRname + " ");
       }
@@ -38,5 +38,26 @@ public class Graph {
         }
         System.out.println();
       }
+    }
+
+    public void depthFirstSearch(int src) {
+      boolean[] visited = new boolean[matrix.length];
+      dFShelper(src,visited);
+
+    }
+    private void dFShelper(int src, boolean[] visited){
+      if (visited[src] == true) {
+        return;
+      } else {
+        visited[src] = true;
+        System.out.println(nodes.get(src).MTRname+" =visited");
+      }
+
+      for (int i=0;i<matrix[src].length;i++){
+        if(matrix[src][i] == 1){
+          dFShelper(i, visited);
+        }
+      }
+      return;
     }
 }
