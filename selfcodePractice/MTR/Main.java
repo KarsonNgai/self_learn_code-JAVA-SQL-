@@ -1,4 +1,3 @@
-package MTR;
 public class Main {
   public static void main(String[] arg){
     MTRmap.printAll(); //this use to see the setting, including index and shortname
