@@ -36,7 +36,7 @@ INSERT INTO WORKER
 INSERT INTO WORKER 
 	(FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT) VALUES
 		('Lin', 'Wong', 70000, '21-01-20 09:00:00', 'Account'),
-        ('Hei', 'Chan', 70000, '21-01-20 09:00:00', 'Account');
+        	('Hei', 'Chan', 70000, '21-01-20 09:00:00', 'Account');
 -- create table bonus
 CREATE TABLE BONUS (
 	WORKER_REF_ID INTEGER,
@@ -59,10 +59,10 @@ SELECT * FROM WORKER WHERE FIRST_NAME='Satish';
 INSERT INTO BONUS
 	(WORKER_REF_ID,BONUS_AMOUNT,BONUS_DATE) VALUES
 		(5,32000,'21-11-02 00:00:00'),
-        (5,20000,'22-11-02 00:00:00'),
-        (4,21000,'21-11-02 00:00:00'),
-        (8,30000,'21-11-02 00:00:00'),
-        (7,4500,'22-11-02 00:00:00');
+        	(5,20000,'22-11-02 00:00:00'),
+        	(4,21000,'21-11-02 00:00:00'),
+        	(8,30000,'21-11-02 00:00:00'),
+        	(7,4500,'22-11-02 00:00:00');
 
 -- Task 2:
 -- Write an SQL query to show the second highest salary among all workers.
