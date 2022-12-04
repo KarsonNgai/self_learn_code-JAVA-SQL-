@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <!--导入thymeleaf的名称空间-->
+    <head>
+        <title>Getting Started: Serving Web Content</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>This is my first trial<h1>
+        <!--th:text 为 Thymeleaf 属性，用于获取指定属性的值-->
+        <h3><p th:text="'Hello, ' + ${name} + '!'" /><h3>
+        <form action="http://localhost:8080/api/nextpage">
+            <input type="submit" value="Go to Google" />
+        </form>
+    </body>
+</html>

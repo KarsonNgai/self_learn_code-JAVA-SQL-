@@ -1,0 +1,6 @@
+server.port: 8082
+
+restHello:
+  baseUrl: http://localhost:8081
+  serviceVers: api/v1
+  serviceUrl: hello?value=ke

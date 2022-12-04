@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore_db
+    username: root
+    password: sdsd2543189
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate.ddl-auto: none
+    show-sql: true
+
+
+server.port: 8080
+
+
+#value
+weatherAPI: 
+  baseUrl: https://api.openweathermap.org
+  serviceVers: data/2.5
+  serviceUrl: weather
+  key: adb616b4436d21c8b8229ac90f159060
