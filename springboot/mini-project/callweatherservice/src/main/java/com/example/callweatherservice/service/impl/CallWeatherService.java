@@ -1,6 +1,9 @@
 package com.example.callweatherservice.service.impl;
 
+import java.time.Duration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -22,10 +25,21 @@ public class CallWeatherService implements CallWeatherServiceInter{
 
   @Value("${weatherAPI.key}")
   String key;
+
+  @Autowired
+  RedisTemplate<String, WeatherAPI> redisTemplate;
   
 
   @Override
   public WeatherAPI getAllInfo(Double lat, Double lon){
+
+    String keyForRedis = "Weather:"+lat+":"+lon;
+    
+    if(redisTemplate.opsForValue().get(keyForRedis)!=null){
+      return redisTemplate.opsForValue().get(keyForRedis);
+    }
+
+    System.out.println("this is key: "+keyForRedis+"|||end");
     String url = UriComponentsBuilder.fromUriString(baseUrl).
                         pathSegment(serviceVers).
                         path(serviceUrl).
@@ -39,6 +53,7 @@ public class CallWeatherService implements CallWeatherServiceInter{
 
     WeatherAPI callWeather = restTemplate.getForObject(url, WeatherAPI.class);
   
+    redisTemplate.opsForValue().set(keyForRedis, callWeather, Duration.ofMinutes(10L));
     return callWeather;
   }
 

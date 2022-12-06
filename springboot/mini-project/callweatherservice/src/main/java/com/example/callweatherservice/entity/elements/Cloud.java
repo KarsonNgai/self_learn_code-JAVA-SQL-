@@ -1,5 +1,6 @@
 package com.example.callweatherservice.entity.elements;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cloud {
+public class Cloud implements Serializable{
   Integer all;
   
 }

@@ -1,5 +1,6 @@
 package com.example.callweatherservice.entity.elements;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Main {
+public class Main implements Serializable{
   Double temp;
 
   Double feels_like;

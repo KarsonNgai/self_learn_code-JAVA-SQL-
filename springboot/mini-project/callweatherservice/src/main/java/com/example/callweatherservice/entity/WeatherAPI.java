@@ -1,5 +1,6 @@
 package com.example.callweatherservice.entity;
 
+import java.io.Serializable;
 import java.util.Collection;
 import com.example.callweatherservice.entity.dto.WeatherDTO1;
 import com.example.callweatherservice.entity.elements.Cloud;
@@ -16,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class WeatherAPI {
+public class WeatherAPI implements Serializable{
   
   Coord coord;
 
