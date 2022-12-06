@@ -8,4 +8,5 @@ shop_testdb
 
 #more on how to call another api
 #beside using the html and call, we use restTemple.read(url, class_name.class), deserialize
+#redis
 callweatherservice
