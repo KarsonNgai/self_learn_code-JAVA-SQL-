@@ -11,9 +11,12 @@ spring:
 
 #h2 setting
 # Data Source Settings
-spring.datasource:
-  platform: h2
-  url: jdbc:h2:mem:jpademo
+spring:
+  datasource:
+    url: jdbc:h2:mem:jpademo
+  sql:
+    init:
+      platform: h2
 
 # JPA Settings
 spring.jpa:
@@ -21,7 +24,9 @@ spring.jpa:
   hibernate.ddl-auto: create-drop # for development purpose
 
 # H2 Database Settings
-spring.h2.console.enabled: true
+spring: h2.console.enabled: true
+
+
 
 
 
