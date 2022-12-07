@@ -24,7 +24,7 @@ spring:
 # JPA Settings
   jpa:
     show-sql: true
-    hibernate.ddl-auto: create-drop # for development purpose
+    hibernate.ddl-auto: none #create-drop # for development purpose /useless, 因為有機會drop左人地既野
 
 # H2 Database Settings
   h2:
