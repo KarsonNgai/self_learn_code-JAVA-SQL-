@@ -1,0 +1,30 @@
+#h2 setting
+# Data Source Settings
+spring:
+  datasource:
+    url: jdbc:h2:mem:jpademo
+  sql:
+    init:
+      platform: h2
+      #一start server就會run
+      #用黎test crud功能
+      #如果冇sql用,可以係spring boot到寫住先
+      schema-locations: classpath:DDL_DEPARTMENT.sql, classpath:DDL_EMPLOYEE.sql
+      data-locations: classpath:DML_DEPARTMENT.sql, classpath:DML_EMPLOYEE.sql
+      mode: always
+
+# JPA Settings
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create-drop # for development purpose
+
+# H2 Database Settings
+  h2:
+    console:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,1 @@
+insert into department(id, dept_name) values(1,'dept 1');
