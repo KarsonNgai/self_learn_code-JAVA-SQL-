@@ -9,7 +9,23 @@ spring:
     hibernate.ddl-auto: none
     show-sql: true
 
-#redis
+#h2 setting
+# Data Source Settings
+spring.datasource:
+  platform: h2
+  url: jdbc:h2:mem:jpademo
+
+# JPA Settings
+spring.jpa:
+  show-sql: true
+  hibernate.ddl-auto: create-drop # for development purpose
+
+# H2 Database Settings
+spring.h2.console.enabled: true
+
+
+
+#redis setting
 #spring:
   redis:
     database: 0
@@ -19,6 +35,8 @@ spring:
     timeout: 60000
 
 
+#self definited variables, below is example
+#this store the variable that use to call api through restTemple
 #value:variable to call api
 weatherAPI: 
   baseUrl: https://api.openweathermap.org
@@ -31,4 +49,5 @@ weatherAPI:
 #      data-locations: classpath:DML_STUDENTS.sql
 #      mode: always
 
+#port
 server.port: 8080
