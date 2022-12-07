@@ -12,6 +12,7 @@ spring:
     show-sql: true
 
 #h2 setting
+#link: http://localhost:8080/h2-console
 # Data Source Settings
 spring:
   datasource:
