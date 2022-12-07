@@ -58,5 +58,17 @@ weatherAPI:
 #      data-locations: classpath:DML_STUDENTS.sql
 #      mode: always
 
+#係spring boot到寫sql,一run application就會run
+spring:
+  sql:
+    init:
+      platform: h2
+      #一start server就會run
+      #用黎test crud功能
+      #如果冇sql用,可以係spring boot到寫住先
+      schema-locations: classpath:DDL_DEPARTMENT.sql, classpath:DDL_EMPLOYEE.sql
+      data-locations: classpath:DML_DEPARTMENT.sql, classpath:DML_EMPLOYEE.sql
+      mode: always
+
 #port
 server.port: 8080
