@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <!--导入thymeleaf的名称空间-->
+    <head>
+        <title>Home page</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>type and search by book name<h1>
+
+        <form action="http://localhost:8080/api/v1h/search">
+            <label for="bookName">book name:</label>
+            <input type="text" id="bookName" name="bookName">
+            <input type="submit" value="search" />
+        </form>
+
+        <form action="http://localhost:8080/api/v1h/bookList">
+            <input type="submit" value="check book list" />
+        </form>
+    </body>
+</html>

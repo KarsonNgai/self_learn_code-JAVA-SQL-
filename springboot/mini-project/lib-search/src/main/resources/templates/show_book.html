@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Book lib sys: Search book by name</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Book found, here is the result<h1>
+        <h3><p th:text="'Book id: ' + ${bookId}" /><h3>
+        <h3><p th:text="'Book name: ' + ${bookName}" /><h3>
+        <h3><p th:text="'Abstract: ' + ${bookDiscribe}" /><h3>
+        <h3><p th:text="'Book Publish Date: ' + ${publicDate}" /><h3>
+        <h3><p th:text="'Author name: ' + ${authorName}" /><h3>
+        <form action="http://localhost:8080/api/v1h">
+            <input type="submit" value="back to home" />
+        </form>
+    </body>
+</html>
