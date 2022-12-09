@@ -1,12 +1,17 @@
 #simple controller-service-repository
-forumpost
-bookstore
+-forumpost
+-bookstore
 
 #more on JOIN TABLE
 #@OneToMany, @ManyToMany, @JSONIGNORE
-shop_testdb
+-shop_testdb
 
 #more on how to call another api
 #beside using the html and call, we use restTemple.read(url, class_name.class), deserialize
 #redis
 callweatherservice
+
+#try to request by html (as a normal user)
+#in other word, type the word in the search bar and press search button, then we get the result
+#the map relationship would be many-to-many in overview, but it is actually is one-to-one|many-to-many|one-to-one(book|book_info|author)
+lib-search
