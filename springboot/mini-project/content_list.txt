@@ -14,4 +14,8 @@ callweatherservice
 #try to request by html (as a normal user)
 #in other word, type the word in the search bar and press search button, then we get the result
 #the map relationship would be many-to-many in overview, but it is actually is one-to-one|many-to-many|one-to-one(book|book_info|author)
-lib-search
+-lib-search
+:html-map:
+  |home->book list-> get all the book book with id
+       ->typy the book name and click search->result found, get the info of book->back to home
+                                            ->result not found message->back to home
