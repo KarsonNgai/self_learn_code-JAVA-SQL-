@@ -29,6 +29,7 @@ public class BookInfo {
   @Column(name = "author_id")
   Long authorId;
 
+  //this is onetoone, but in general say, it is many to many
   @OneToOne(mappedBy = "bookInfo")
   @JsonIgnore
   Author author;

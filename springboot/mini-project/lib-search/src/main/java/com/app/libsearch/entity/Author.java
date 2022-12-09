@@ -27,6 +27,7 @@ public class Author {
   @Column(name = "author_name")
   String authorName;
 
+  //should join from here, not why?because of primary key?
   @OneToOne
   @JoinColumn(name = "author_id", referencedColumnName = "author_id")
   @JsonIgnore

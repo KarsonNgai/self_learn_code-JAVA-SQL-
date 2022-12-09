@@ -33,6 +33,7 @@ public class Book {
   @Column(name = "public_date")
   String publicDate;
 
+  //see Authors
   @OneToOne
   @JoinColumn(name = "book_id", referencedColumnName = "book_id")
   @JsonIgnore
