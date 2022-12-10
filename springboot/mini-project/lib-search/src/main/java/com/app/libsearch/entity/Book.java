@@ -1,11 +1,16 @@
 package com.app.libsearch.entity;
 
+import java.util.List;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -34,8 +39,12 @@ public class Book {
   String publicDate;
 
   //see Authors
-  @OneToOne
-  @JoinColumn(name = "book_id", referencedColumnName = "book_id")
+  @ManyToMany
   @JsonIgnore
-  BookInfo bookInfo;
+  @JoinTable(
+    name = "book_info",
+    joinColumns = @JoinColumn(name="book_id"),
+    inverseJoinColumns = @JoinColumn(name = "author_id")
+  )
+  Set<Author> authors;
 }
