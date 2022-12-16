@@ -20,7 +20,7 @@ insert into channels (channel_code,channel_url) values
 	('CoinGecko','localhost:8085/crypto/coingecko'),
     ('Polygon','localhostL8086/crypto/polygon');
 
-create table channels_transaction( 
+create table channel_transaction( 
 	-- method third party api info, the way we want to use for (select which method/way)
 	id int not null auto_increment,
     channel_id int not null,
@@ -33,12 +33,12 @@ create table channels_transaction(
     foreign key(channel_id) references channels(id)
 );
 
-insert into channels_transaction(channel_id,domain_version,domain_url,source_app,tran_type,tran_status)
+insert into channel_transaction(channel_id,domain_version,domain_url,source_app,tran_type,tran_status)
 values
 	(1,'api/v1','simple-price','crypto-web','exchange rate between crypto and currency(usd)','A'),
 	(1,'api/v1','exchange-rate','crypto-web','exchange rate between crypto and currencies(unclear)','N'),
     (2,'api/v1','simple-price','crypto-web','exchange rate between crypto and currency(usd)','A'),
-    (1,'api/v1','market-price','crypto-web','show the market price of the crypto','A');
+    (1,'api/v1','market-price','crypto-web','show the market price of the crypto','N');
 
 create table coin_mapping(
 	id int auto_increment not null,
