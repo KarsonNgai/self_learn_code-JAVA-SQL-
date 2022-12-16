@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bookstore_db
     username: root
-    password: sdsd2543189
+    password: rootpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
