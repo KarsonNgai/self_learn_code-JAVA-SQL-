@@ -1,0 +1,14 @@
+server.port: 8085
+
+
+#https://www.coingecko.com/en/api/documentation
+API:
+  Crypto:
+    baseUrl: https://api.coingecko.com
+    serviceVers: api/v3
+    serviceUrl: 
+      coins_markets: coins/markets
+      exchange_rates: exchange_rates
+      simple_price: simple/price
+    parm:
+      elements_numbers: 10
