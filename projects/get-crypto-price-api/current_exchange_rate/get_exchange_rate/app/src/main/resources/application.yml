@@ -1,7 +1,5 @@
 server.port: 8085
 
-
-#https://www.coingecko.com/en/api/documentation
 API:
   Crypto:
     baseUrl: https://api.coingecko.com
