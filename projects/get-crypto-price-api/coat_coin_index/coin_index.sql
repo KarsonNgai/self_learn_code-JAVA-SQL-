@@ -7,18 +7,23 @@ CREATE SCHEMA `project1_db` ;
 -- CREATE SCHEMA `project1_db` ;
 use project1_db;
 
+-- for checking result in postmapping
+create table updated_id(
+	id varchar(30) not null primary key
+);
+
 create table channels(
 	-- third party info, which channel we want to call (select which company)
 	id int not null auto_increment,
     channel_code varchar(30), -- can be better as int, this can be the foreign key in a table with the api provider info
     channel_url varchar(100),
-    last_updDate datetime default(now()),
+    last_updated_date datetime default(now()),
     primary key(id)
 );
 
 insert into channels (channel_code,channel_url) values
 	('CoinGecko','localhost:8085/crypto/coingecko'),
-    ('Polygon','localhostL8086/crypto/polygon');
+    ('Polygon','localhost:8086/crypto/polygon');
 
 create table channel_transaction( 
 	-- method third party api info, the way we want to use for (select which method/way)
@@ -29,6 +34,7 @@ create table channel_transaction(
     source_app varchar(70),
     tran_type varchar(70),
     tran_status varchar(2),
+    last_updated_date datetime default(now()),
     primary key(id),
     foreign key(channel_id) references channels(id)
 );
@@ -46,6 +52,7 @@ create table coin_mapping(
     coin_code varchar(30), 
     coin_id varchar(30), -- could be better, for instance: create a table to describe the coin, then it can be number and foreign key
     coin_status varchar(2),
+    last_updated_date datetime default(now()),
     primary key(id),
     foreign key(channel_id) references channels(id)
 );
@@ -56,14 +63,17 @@ insert into coin_mapping(channel_id, coin_code,coin_id,coin_status) values
     (1,'tether','USDT','A'),
     (1,'dogecoin','DOGE','A'),
     (1,'ripple','XRP','A'),
-    (2,'X:BTCUSD','BTC','A'),
-    (2,'X:ETHUSD','ETH','A'),
-    (2,'X:USDTUSD','USDT','A'),
-    (2,'X:DOGEUSD','DOGE','A'),
-    (2,'X:XRPUSD','XRPBTC','A');
-    select * from coin_mapping;
+    (2,'BTC','BTC','A'),
+    (2,'ETH','ETH','A'),
+    (2,'USDT','USDT','A'),
+    (2,'DOGE','DOGE','A'),
+    (2,'XRP','XRP','A');
 /*
 drop table coin_mapping;
 drop table channels_transaction;
 drop table channels;
 */
+
+select * from coin_mapping;
+select * from channels;
+select * from channel_transaction;
