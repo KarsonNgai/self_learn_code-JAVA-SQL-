@@ -1,7 +1,6 @@
 server.port: 8086
 
 
-#https://www.coingecko.com/en/api/documentation
 API:
   Crypto:
     baseUrl: https://api.polygon.io
@@ -12,4 +11,4 @@ API:
         path3: prev
         parm:
           ajusted: true
-  api_key: I8MqMDt5c_mXOuAMdWJEP_Kkb8XGi9au
+  api_key: #not gonna provide
