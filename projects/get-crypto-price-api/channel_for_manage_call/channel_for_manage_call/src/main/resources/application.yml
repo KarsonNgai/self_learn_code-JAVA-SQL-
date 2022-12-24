@@ -1,0 +1,10 @@
+server:
+ port: 8087
+
+
+
+validation:
+    coin-code:
+        baseUrl: localhost:8083/crypto/coincode
+        serviceVers: api/v1
+        method: coin_info
