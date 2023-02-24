@@ -35,10 +35,10 @@ read record...
 
 <h3>more function:</h3>
 
--call exchange api and change it to target currency
--using redis for caching to as the saving is relativly stable within a day (redis call on every single morning)
--or using a observer to notice there is a change and call redis to get data (upgrade, redis call when notice there is a change in db)
--make this app on cloud
--frontend(web) : expect using react
--mobile(ISO)
+-call exchange api and change it to target currency  
+-using redis for caching to as the saving is relativly stable within a day (redis call on every single morning)  
+-or using a observer to notice there is a change and call redis to get data (upgrade, redis call when notice there is a change in db)  
+-make this app on cloud  
+-frontend(web) : expect using react  
+-mobile(ISO)  
 
