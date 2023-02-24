@@ -1,0 +1,44 @@
+<h3>database:</h3>  
+
+>design  
+>create table  
+>insert fake data for function test
+
+<h3>API:</h3>  
+
+design and code  
+
+<h4>POST</h4>
+
+>入record  
+
+<h4>GET</h4>  
+
+read record...  
+>by year  
+>by month  
+>ALL  
+>by id  
+---note---  
+會show個sum(睇下個setter)  
+
+
+<h4>PATCH/PUT</h4>
+
+>update status by id  
+>get->insert -> update status (delete in client side)  
+
+
+<h4>delete:</h4>
+
+>sql  
+
+<h3>more function:</h3>
+
+-call exchange api and change it to target currency
+-using redis for caching to as the saving is relativly stable within a day (redis call on every single morning)
+-or using a observer to notice there is a change and call redis to get data (upgrade, redis call when notice there is a change in db)
+-make this app on cloud
+-frontend(web) : expect using react
+-mobile(ISO)
+
