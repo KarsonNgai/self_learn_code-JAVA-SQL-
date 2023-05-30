@@ -1,0 +1,29 @@
+spring:
+    #h2 config
+    #h2.console: 
+    #    enabled: true
+    #    path: /h2-ui
+        # default path: h2-console
+
+    #datasource:
+    #    url: jdbc:h2:file:./testdb
+    #    driverClassName: org.h2.Driver
+    #    username: sa
+    #    password: 
+    datasource:
+        url: jdbc:mysql://localhost:3306/authorization_db
+        username: root
+        password: rootpassword
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa: 
+        properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+        hibernate.ddl-auto: none
+        show-sql: true
+
+#App properties
+bezkoder: 
+    app:
+        jwtCookieName: bezkoder
+        jwtSecret: bezKoderSecretKey
+        jwtExpirationMs: 86400000
