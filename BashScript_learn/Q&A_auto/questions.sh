@@ -4,7 +4,7 @@ echo "Hello, who are you?"
 
 read $REPLY
 
-echo "can I ask you some questions?"
+echo "Can I ask you some questions?"
 
 read $REPLY
 
