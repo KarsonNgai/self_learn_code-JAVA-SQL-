@@ -14,6 +14,8 @@ send -- "the branch is update to date"
 
 spawn git pull
 
+expect eof
+
 spawn code .
 
 expect eof
