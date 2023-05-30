@@ -8,6 +8,6 @@ echo "Can I ask you some questions?"
 
 read $REPLY
 
-echo "What is you favourite topic?"
+echo "What is your favorite topic?"
 
 read $REPLY
