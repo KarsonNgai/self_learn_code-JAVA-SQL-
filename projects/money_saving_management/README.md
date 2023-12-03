@@ -3,6 +3,7 @@
 >design  
 >create table  
 >insert fake data for function test
+>money_management.sql
 
 <h3>API:</h3>  
 
@@ -10,28 +11,31 @@ design and code
 
 <h4>POST</h4>
 
->入record  
+>insert record  
+>1. create type
+>2. base on type, create category 
+>3. base on category, create transaction (instance)
 
 <h4>GET</h4>  
 
 read record...  
+>ALL  
 >by year  
 >by month  
->ALL  
->by id  
 ---note---  
-會show個sum(睇下個setter)  
+may show the sum  
 
 
 <h4>PATCH/PUT</h4>
 
 >update status by id  
->get->insert -> update status (delete in client side)  
+>check if the data exist->insert the transaction-> update status (delete in client side)  
 
 
 <h4>delete:</h4>
 
->sql  
+>update status by id  
+>check if the data exist-> update status (delete in client side)    
 
 <h3>more function:</h3>
 
