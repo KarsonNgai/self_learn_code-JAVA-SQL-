@@ -1,0 +1,27 @@
+:root{
+  --nav-bar-width: 20%;
+  --layout-padding-interval: 8%;
+}
+
+#home-page-navigation-bar{
+  position: absolute;
+  height: 100%;
+  width: var(--nav-bar-width);
+  border: 1px black solid;
+  background-color: grey;
+  z-index: 99;
+  
+}
+
+/* I layout no scroll bar for left right */
+#layout-style{
+  width: calc( 100% - var(--nav-bar-width) - var(--layout-padding-interval));
+  height:100vh;
+  background-color:#FF2E95;
+  display:flex;
+  align-items:left;
+  justify-content:center;
+  flex-direction:column;
+  margin-left: var(--nav-bar-width);
+  padding-left: var(--layout-padding-interval) ;
+}
